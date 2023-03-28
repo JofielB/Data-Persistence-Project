@@ -72,5 +72,14 @@ public class MainManager : MonoBehaviour
     {
         m_GameOver = true;
         GameOverPannel.SetActive(true);
+        CheckFinalScore();
+    }
+
+    private void CheckFinalScore()
+    {
+        if (DataManager.instance.BestScorePoints < m_Points)
+        {
+            DataManager.instance.UpdateBestScoreData(m_Points);
+        }
     }
 }
