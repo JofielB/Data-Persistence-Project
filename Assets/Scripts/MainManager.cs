@@ -77,7 +77,7 @@ public class MainManager : MonoBehaviour
 
     private void CheckFinalScore()
     {
-        if (DataManager.instance.BestScorePoints < m_Points)
+        if (DataManager.instance != null && DataManager.instance.BestScorePoints < m_Points)
         {
             DataManager.instance.UpdateBestScoreData(m_Points);
         }

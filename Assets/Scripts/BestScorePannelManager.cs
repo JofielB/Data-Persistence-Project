@@ -7,9 +7,9 @@ public class BestScorePannelManager : MonoBehaviour
 {
     public TextMeshProUGUI bestScoreText;
 
-    private void Awake()
+    private void Start()
     {
-        if (DataManager.instance.BestScorePoints > 0)
+        if (DataManager.instance != null && DataManager.instance.BestScorePoints > 0)
         {
             bestScoreText.text =
                 DataManager.instance.BestScoreUsername
